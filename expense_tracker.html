@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Expense-Tracker</title>
+        <header>
+            <h1>Expense Tracker</h1>
+        </header>
+    </head>
+    <body>
+        <main>
+        <div id="balance-display">
+            <h2 class="title">Balance</h2>
+            <p id="balance-value" class= "val">0</p>
+            <div class = "row">
+            <div id="income">
+                <h3 class="title"><span style = "color:darkseagreen">Income</span></h3>
+                <p id="income-val" class= "val"> 0 </p>
+            </div>
+            <div id="expenses">
+                <h3 class="title"><span style = "color:lightcoral">Expenses</span></h3>
+                <p id="expenses-val" class= "val"> 0 </p>
+            </div>
+            </div>
+        </div>
+
+        <div id="list-form">
+            <div id="transactions">
+                <h3 class="title">Transactions</h3>
+                <ul id= "expense-list" type="none">
+                </ul>
+            </div>
+            <div id="form">
+                <h3 class="title">Add Transaction</h2>
+                <form>
+                    <div class="form-row">
+                    <label for="type" class="title">Type:</label><input type="text" id="type">
+                    <br>
+                    <br>
+                    <label for="amount" class="title">Amount: </label><input type="text" id="amount">
+                    <p ><span style="color:grey ; font-size:small ; font-family:Arial, Helvetica, sans-serif;"> Enter a negative value for expenses</span></p>
+                    <label for="date" class="title">Date: </label><input type="text" id="date">
+                    <br>
+                    <br>
+                    <input type="submit" value="Add Transaction" id="submit-button">
+                    <div id="refresh-button">
+                        <h4><span style = "color:white;font-size:small ; font-family:Arial, Helvetica, sans-serif; font-weight: 100;">Refresh Data</span></h4>
+                    </div>
+                    </div>
+                </form>
+            </div>
+           
+            
+           </ul>
+        </div>
+        <script src = "expense_tracker.js">
+        </script>
+        </main>
+    </body>
+</html>
