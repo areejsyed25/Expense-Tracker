@@ -62,12 +62,17 @@ let updateBalance = (newTransaction) => {
 form.addEventListener("submit", function(event){
     event.preventDefault();
 
+
     let newTransaction = {
     type: expenseType.value,
     amount: Number(expenseAmount.value),
     date: expenseDate.value
     };
 
+    if(isNaN(newTransaction.amount)){
+        alert("Amount entered must be a valid value!")
+        return;
+    }
     updateExpenses(newTransaction);
     updateBalance(newTransaction);
     addListItem(expenseList,newTransaction);
