@@ -27,10 +27,13 @@ transactions.forEach((tx) => {
   } else {
     expensesTotal += tx.amount;
   }
+
+  balanceTotal += tx.amount;
 });
 
 income.innerText = String(incomeTotal);
 expenses.innerText = String(expensesTotal);
+balance.innerText = String(balanceTotal)
 
 
 let addListItem = (expenseList,newTransaction) =>{
